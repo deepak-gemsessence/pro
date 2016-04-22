@@ -1,0 +1,99 @@
+book - https://git-scm.com/book/en/v2
+
+1. to set email -
+git config --global user.email "deepak@gemsessence.com"
+
+2. to set username -
+git config --global user.name "deepak"
+
+3. to check settings i.e. email, username etc.
+git config --list
+
+4. to check specific setteing use
+git config <key>  (key may be user.name, user.email etc)
+
+5. to get help
+git help config
+
+6. Checking the Status of Your Files
+git status
+
+7. Short Status
+git status -s
+
+8. to check status
+git status
+
+9. to show still unstaged modified diff
+git diff
+
+10. The Git repository browser(shows graph)
+gitk
+
+11. Viewing the Commit History(-p -2, --stat)
+git log
+
+12. to show branches
+git branch
+
+13. to alias
+git config --global alias.st status
+git st
+
+14. to create branches
+git branch branch_name
+
+15. You can easily see this by running a simple git log command that shows you where the branch pointers are pointing. This option is called --decorate.
+git log --oneline --decorate
+git log --oneline --decorate --graph --all
+
+16. to switch branches(from master to branch_name)
+git checkout branch_name
+
+17. To create a branch and switch to it at the same time
+git checkout -b branch_name
+
+18. to merge branches(in current branch)
+git merge branch_name
+
+19. now you can delete merged branch
+git branch -D brach_name
+
+20. to check merged branches
+git branch --merged
+
+21. to check un-merged branches
+git branch --no-merged
+
+22. to undoing commit
+git commit -m 'initial commit'
+git add forgotten_file
+git commit --amend
+
+23. shows all commits
+git reflog
+
+24. to go previous to git add
+git reset HEAD file_name
+
+
+
+https://www.atlassian.com/git/tutorials/resetting-checking-out-and-reverting/commit-level-operations
+https://davidzych.com/difference-between-git-reset-soft-mixed-and-hard/
+http://stackoverflow.com/questions/3528245/whats-the-difference-between-git-reset-mixed-soft-and-hard
+
+25. to go previous to commit(un-commit) = reset only head
+git reset --soft 'HEAD^'
+or
+git reset --soft 'HEAD~3'
+
+26. to go previous to commit(un-commit) = reset HEAD, index and working repository also
+git reset --hard 'HEAD^'
+
+27. to go previous to commit(un-commit) = reset HEAD, index but not working repository
+git reset --mixed 'HEAD^'
+
+28. to search specific word in any file on same project
+git grep word_to_be_searched
+
+29.
